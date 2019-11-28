@@ -3,3 +3,5 @@
 .vscode
 *.idea
 /kubernetes
+*.out
+*.target
