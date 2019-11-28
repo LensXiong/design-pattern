@@ -1,0 +1,24 @@
+@startuml
+abstract HouseBuilder
+
+BuildingCommon --|> HouseBuilder
+BuildingHigh --|> HouseBuilder
+BuildingOther --|> HouseBuilder
+House  --* HouseBuilder
+HouseBuilder --o HouseDirector
+
+Client ..> HouseDirector
+Client ..> BuildingCommon
+Client ..> BuildingHigh
+Client ..> BuildingOther
+
+HouseBuilder : house:House = new House()
+HouseBuilder : buildBasic():void
+HouseBuilder : buildWalls():void
+HouseBuilder : roofed():void
+
+Client :  buildingCommon:BuildingCommon ...
+Client :  houseDirector:HouseDirector
+
+HouseDirector : houseBuilder:HouseBuilder
+@enduml

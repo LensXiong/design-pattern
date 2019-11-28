@@ -1,10 +1,8 @@
 @startuml
 interface Interface
 
-
-VoltageAdapter <|.. Interface
-
-
+AbsAdapter ..|> Interface
+Client ..> AbsAdapter
 
 Interface : operation1():void
 Interface : operation2():void

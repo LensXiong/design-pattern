@@ -1,7 +1,7 @@
 package com.wwxiong.patterns.adapter.interfaceadapter;
 
-//在AbsAdapter 我们将 Interface4 的方法进行默认实现
-public abstract class AbsAdapter implements Interface4 {
+//在AbsAdapter 我们将 Interface 的方法进行默认实现
+public abstract class AbsAdapter implements Interface {
 
     //默认实现
     public void operation1() {
