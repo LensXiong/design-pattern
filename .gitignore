@@ -4,4 +4,4 @@
 *.idea
 /kubernetes
 *.out
-*.target
+*target
