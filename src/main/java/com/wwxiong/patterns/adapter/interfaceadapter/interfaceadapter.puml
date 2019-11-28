@@ -1,0 +1,14 @@
+@startuml
+interface Interface
+
+
+VoltageAdapter <|.. Interface
+
+
+
+Interface : operation1():void
+Interface : operation2():void
+Interface : operation3():void
+Interface : operation34():void
+
+@enduml

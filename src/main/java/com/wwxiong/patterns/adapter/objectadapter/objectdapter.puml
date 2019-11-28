@@ -1,0 +1,15 @@
+@startuml
+interface IVoltage5V
+
+Client ..> Phone
+Client ..> VoltageAdapter
+Client ..> Voltage220V
+Phone ..> IVoltage5V
+Voltage220V --o VoltageAdapter
+IVoltage5V <|.. VoltageAdapter
+
+Phone : charging():void
+IVoltage5V : output5V():void
+Voltage220V : output220V():void
+VoltageAdapter : output5V:int
+@enduml
