@@ -4,4 +4,13 @@
 *.idea
 /kubernetes
 *.out
-*target
+.idea
+.metadata
+.project
+.settings
+.classpath
+target
+.prefs
+.component
+*.lst
+*.iml
