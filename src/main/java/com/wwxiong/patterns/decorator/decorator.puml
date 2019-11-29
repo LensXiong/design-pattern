@@ -1,0 +1,36 @@
+@startuml
+abstract Drink
+
+Coffee --|> Drink
+CoffeeDeCaf --|> Coffee
+CoffeeEspresso --|> Coffee
+CoffeeLongBlack --|> Coffee
+CoffeeShortBlack --|> Coffee
+
+Decorator --* Drink
+Decorator --|> Drink
+
+DrinkChocolate --|> Decorator
+DrinkMilk --|> Decorator
+DrinkSoy --|> Decorator
+
+Client --o CoffeeLongBlack
+Client --o CoffeeShortBlack
+Client --o CoffeeEspresso
+Client --o CoffeeDeCaf
+
+Coffee : cost():float
+Drink : des:String
+Drink : price:float
+Drink : getDes():String
+Drink : setDes():void
+Drink : getPrice():float
+Drink : setPrice():void
+Drink : cost():float
+
+Decorator : Drink obj
+Decorator : getDes(): String
+Decorator : cost(): float
+
+
+@enduml

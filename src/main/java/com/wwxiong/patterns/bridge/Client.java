@@ -1,5 +1,8 @@
 package com.wwxiong.patterns.bridge;
 
+/**
+ * 桥接模式的调用者
+ */
 public class Client {
 
     public static void main(String[] args) {

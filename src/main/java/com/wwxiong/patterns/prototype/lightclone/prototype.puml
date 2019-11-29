@@ -1,0 +1,9 @@
+@startuml
+interface Cloneable
+Client ..> ConcreteSheep
+Client ..> ConcreteDog
+
+ConcreteDog ..|> Cloneable
+ConcreteSheep ..|> Cloneable
+
+@enduml
