@@ -1,0 +1,16 @@
+@startuml
+abstract Component
+Client ..> Component
+
+Department --|> Component
+College --|> Component
+University --|> Component
+
+Department --o College
+College --o University
+
+Component : add():void
+Component : remove():void
+Component : print():void
+
+@enduml

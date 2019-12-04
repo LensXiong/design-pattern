@@ -1,20 +1,29 @@
 package com.wwxiong.patterns.composite;
 
 /**
- * Component 抽象类
+ * 组合中对象声明接口
+ * 在适当情况下，实现所有类共有的接口默认行为,用于访问和管理 Component 子部件, Component 可以是抽象类或者接口。
  */
-public abstract class OrganizationComponent {
+public abstract class Component {
 
     private String name;
     private String des;
 
+    protected void add(Component component) {
+        throw new UnsupportedOperationException();
+    }
+
+    protected void remove(Component component) {
+        throw new UnsupportedOperationException();
+    }
+
     /**
-     * 构造方法
+     * 构造器
      *
      * @param name
      * @param des
      */
-    public OrganizationComponent(String name, String des) {
+    public Component(String name, String des) {
         super();
         this.name = name;
         this.des = des;
@@ -36,15 +45,8 @@ public abstract class OrganizationComponent {
         this.des = des;
     }
 
-
-    protected void add(OrganizationComponent organizationComponent) {
-        throw new UnsupportedOperationException();
-    }
-
-    protected void remove(OrganizationComponent organizationComponent) {
-        throw new UnsupportedOperationException();
-    }
-
-    // 抽象方法，具体由子类实现
+    // print抽象方法, 需要子类实现
     protected abstract void print();
+
+
 }
