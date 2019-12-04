@@ -1,28 +1,28 @@
-package com.atguigu.composite;
+package com.wwxiong.patterns.composite;
 
 public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//´Ó´óµ½Ğ¡´´½¨¶ÔÏó Ñ§Ğ£
-		OrganizationComponent university = new University("Çå»ª´óÑ§", " ÖĞ¹ú¶¥¼¶´óÑ§ ");
+		//ä»å¤§åˆ°å°åˆ›å»ºå¯¹è±¡ å­¦æ ¡
+		OrganizationComponent university = new University("æ¸…åå¤§å­¦", " ä¸­å›½é¡¶çº§å¤§å­¦ ");
 		
-		//´´½¨ Ñ§Ôº
-		OrganizationComponent computerCollege = new College("¼ÆËã»úÑ§Ôº", " ¼ÆËã»úÑ§Ôº ");
-		OrganizationComponent infoEngineercollege = new College("ĞÅÏ¢¹¤³ÌÑ§Ôº", " ĞÅÏ¢¹¤³ÌÑ§Ôº ");
+		//åˆ›å»º å­¦é™¢
+		OrganizationComponent computerCollege = new College("è®¡ç®—æœºå­¦é™¢", " è®¡ç®—æœºå­¦é™¢ ");
+		OrganizationComponent infoEngineercollege = new College("ä¿¡æ¯å·¥ç¨‹å­¦é™¢", " ä¿¡æ¯å·¥ç¨‹å­¦é™¢ ");
 		
 		
-		//´´½¨¸÷¸öÑ§ÔºÏÂÃæµÄÏµ(×¨Òµ)
-		computerCollege.add(new Department("Èí¼ş¹¤³Ì", " Èí¼ş¹¤³Ì²»´í "));
-		computerCollege.add(new Department("ÍøÂç¹¤³Ì", " ÍøÂç¹¤³Ì²»´í "));
-		computerCollege.add(new Department("¼ÆËã»ú¿ÆÑ§Óë¼¼Êõ", " ¼ÆËã»ú¿ÆÑ§Óë¼¼ÊõÊÇÀÏÅÆµÄ×¨Òµ "));
+		//åˆ›å»ºå„ä¸ªå­¦é™¢ä¸‹é¢çš„ç³»(ä¸“ä¸š)
+		computerCollege.add(new Department("è½¯ä»¶å·¥ç¨‹", " è½¯ä»¶å·¥ç¨‹ä¸é”™ "));
+		computerCollege.add(new Department("ç½‘ç»œå·¥ç¨‹", " ç½‘ç»œå·¥ç¨‹ä¸é”™ "));
+		computerCollege.add(new Department("è®¡ç®—æœºç§‘å­¦ä¸æŠ€æœ¯", " è®¡ç®—æœºç§‘å­¦ä¸æŠ€æœ¯æ˜¯è€ç‰Œçš„ä¸“ä¸š "));
 		
 		//
-		infoEngineercollege.add(new Department("Í¨ĞÅ¹¤³Ì", " Í¨ĞÅ¹¤³Ì²»ºÃÑ§ "));
-		infoEngineercollege.add(new Department("ĞÅÏ¢¹¤³Ì", " ĞÅÏ¢¹¤³ÌºÃÑ§ "));
+		infoEngineercollege.add(new Department("é€šä¿¡å·¥ç¨‹", " é€šä¿¡å·¥ç¨‹ä¸å¥½å­¦ "));
+		infoEngineercollege.add(new Department("ä¿¡æ¯å·¥ç¨‹", " ä¿¡æ¯å·¥ç¨‹å¥½å­¦ "));
 		
-		//½«Ñ§Ôº¼ÓÈëµ½ Ñ§Ğ£
+		//å°†å­¦é™¢åŠ å…¥åˆ° å­¦æ ¡
 		university.add(computerCollege);
 		university.add(infoEngineercollege);
 		
